@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   render() {
-    
+
     const { robots, searchfield } = this.state;
     const filteredRobots = robots.filter(robot =>{
       return robot.name.toLowerCase().includes(searchfield.toLowerCase());
@@ -33,12 +33,13 @@ class App extends Component {
       <h1>Loading</h1> :
       (
         <div className='tc'>
-          <h1 className='f1'>RoboFriends</h1>
+          <h1 className='f1'>Find your own robot!</h1>
           <SearchBox searchChange={this.onSearchChange}/>
           <Scroll>
             <CardList robots={filteredRobots} />
           </Scroll>
-          <CardList robots={filteredRobots} />
+          <h1>All our robots friends</h1>
+          <CardList robots={robots} />
         </div>
       );
   }
