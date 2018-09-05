@@ -36,6 +36,7 @@ class App extends Component {
           <h1 className='f1'>Find your own robot!</h1>
           <SearchBox searchChange={this.onSearchChange}/>
           <Scroll>
+            <h3 className="white tc">Featured robots</h3>
             <CardList robots={filteredRobots} />
           </Scroll>
           <h1>All our robots friends</h1>
